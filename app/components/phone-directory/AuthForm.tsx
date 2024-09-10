@@ -15,7 +15,7 @@ export default function AuthForm({ onAuthenticate }: AuthFormProps) {
   const [error, setError] = useState("");
 
   // Access the password from the environment variable
-  const correctPassword = process.env.PASSWORD;
+  const correctPassword = process.env.LOGIN_PASSWORD;
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
