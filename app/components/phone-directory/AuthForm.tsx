@@ -14,7 +14,8 @@ export default function AuthForm({ onAuthenticate }: AuthFormProps) {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const correctPassword = "hvpd"; // In a real app, this should be securely stored and hashed
+  // Access the password from the environment variable
+  const correctPassword = process.env.NEXT_PUBLIC_AUTH_PASSWORD;
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
